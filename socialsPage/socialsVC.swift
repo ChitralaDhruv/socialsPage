@@ -13,6 +13,7 @@ class socialsVC: UIViewController {
         let label = UILabel()
         label.text = "YouTube"
         label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 23)
         
         return label
     }()
@@ -21,6 +22,7 @@ class socialsVC: UIViewController {
         let label = UILabel()
         label.text = "Instagram"
         label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 23)
         
         return label
     }()
@@ -29,6 +31,7 @@ class socialsVC: UIViewController {
         let label = UILabel()
         label.text = "Twitter"
         label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 23)
         
         return label
     }()
@@ -56,6 +59,7 @@ class socialsVC: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(TweetCell.self, forCellWithReuseIdentifier: "TweetCell")
         collectionView.backgroundColor = .black
+        
 
         return collectionView
         
@@ -90,37 +94,66 @@ class socialsVC: UIViewController {
         view.addSubview(YTcollectionView)
         view.addSubview(IGcollectionView)
         view.addSubview(TwitterCollectionView)
+        view.addSubview(YouTubeLabel)
+        view.addSubview(TwitterLabel)
+        view.addSubview(IGLabel)
+        
         setUpAutoLayout()
 
     }
     
     private func setUpAutoLayout() {
         
-//        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        stackView.heightAnchor.constraint(equalToConstant: view.frame.width*2).isActive = true
+        IGLabel.translatesAutoresizingMaskIntoConstraints = false
+        IGLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
+        IGLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        IGLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         IGcollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         IGcollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
-        IGcollectionView.topAnchor.constraint(equalTo: view.topAnchor,constant: 40).isActive = true
+        IGcollectionView.topAnchor.constraint(equalTo: IGLabel.bottomAnchor).isActive = true
         IGcollectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
+        
+        YouTubeLabel.translatesAutoresizingMaskIntoConstraints = false
+        YouTubeLabel.topAnchor.constraint(equalTo: IGcollectionView.bottomAnchor, constant: 30).isActive = true
+        YouTubeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        YouTubeLabel.heightAnchor.constraint(equalToConstant: 23).isActive = true
         
         YTcollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         YTcollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
-        YTcollectionView.topAnchor.constraint(equalTo: IGcollectionView.bottomAnchor,constant: 30).isActive = true
+        YTcollectionView.topAnchor.constraint(equalTo: YouTubeLabel.bottomAnchor).isActive = true
         YTcollectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
+        
+        
+        TwitterLabel.translatesAutoresizingMaskIntoConstraints = false
+        TwitterLabel.topAnchor.constraint(equalTo: YTcollectionView.bottomAnchor, constant: 30).isActive = true
+        TwitterLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        TwitterLabel.heightAnchor.constraint(equalToConstant: 23).isActive = true
         
         TwitterCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         TwitterCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
-        TwitterCollectionView.topAnchor.constraint(equalTo: YTcollectionView.bottomAnchor,constant: 30).isActive = true
+        TwitterCollectionView.topAnchor.constraint(equalTo: TwitterLabel.bottomAnchor).isActive = true
         TwitterCollectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
+        
     }
 
 }
 
 extension socialsVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/2)
+        
+        if collectionView == IGcollectionView {
+            return CGSize(width: collectionView.frame.width/2, height: collectionView.frame.width/2)
+        }
+        else if collectionView == YTcollectionView {
+            return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/2)
+        }
+        else if collectionView == TwitterCollectionView {
+            return CGSize(width: collectionView.frame.width, height: collectionView.frame.width/2)
+        }
+        else {
+            return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/2)
+        }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10

@@ -9,27 +9,25 @@
 /* Begin PBXBuildFile section */
 		64220D1527F8D0DE0071D149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D1427F8D0DE0071D149 /* AppDelegate.swift */; };
 		64220D1727F8D0DE0071D149 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D1627F8D0DE0071D149 /* SceneDelegate.swift */; };
-		64220D1927F8D0DE0071D149 /* socialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D1827F8D0DE0071D149 /* socialsVC.swift */; };
 		64220D1E27F8D0DF0071D149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64220D1D27F8D0DF0071D149 /* Assets.xcassets */; };
 		64220D2127F8D0DF0071D149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64220D1F27F8D0DF0071D149 /* LaunchScreen.storyboard */; };
 		64220D2A27F8D2E80071D149 /* InstagramPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D2927F8D2E80071D149 /* InstagramPostCell.swift */; };
 		64220D2C27F8D35C0071D149 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D2B27F8D35C0071D149 /* TweetCell.swift */; };
 		64220D2E27F8D3800071D149 /* YTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D2D27F8D3800071D149 /* YTCell.swift */; };
-		64220D3027F8E2030071D149 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D2F27F8E2030071D149 /* VC.swift */; };
+		64220D3027F8E2030071D149 /* socialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64220D2F27F8E2030071D149 /* socialsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		64220D1127F8D0DE0071D149 /* socialsPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialsPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64220D1427F8D0DE0071D149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64220D1627F8D0DE0071D149 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		64220D1827F8D0DE0071D149 /* socialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialsVC.swift; sourceTree = "<group>"; };
 		64220D1D27F8D0DF0071D149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64220D2027F8D0DF0071D149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64220D2227F8D0DF0071D149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64220D2927F8D2E80071D149 /* InstagramPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramPostCell.swift; sourceTree = "<group>"; };
 		64220D2B27F8D35C0071D149 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		64220D2D27F8D3800071D149 /* YTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTCell.swift; sourceTree = "<group>"; };
-		64220D2F27F8E2030071D149 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		64220D2F27F8E2030071D149 /* socialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +63,7 @@
 				64220D2827F8D2B90071D149 /* collectionViewCells */,
 				64220D1427F8D0DE0071D149 /* AppDelegate.swift */,
 				64220D1627F8D0DE0071D149 /* SceneDelegate.swift */,
-				64220D1827F8D0DE0071D149 /* socialsVC.swift */,
-				64220D2F27F8E2030071D149 /* VC.swift */,
+				64220D2F27F8E2030071D149 /* socialsVC.swift */,
 				64220D1D27F8D0DF0071D149 /* Assets.xcassets */,
 				64220D1F27F8D0DF0071D149 /* LaunchScreen.storyboard */,
 				64220D2227F8D0DF0071D149 /* Info.plist */,
@@ -155,12 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64220D2E27F8D3800071D149 /* YTCell.swift in Sources */,
-				64220D1927F8D0DE0071D149 /* socialsVC.swift in Sources */,
 				64220D1527F8D0DE0071D149 /* AppDelegate.swift in Sources */,
 				64220D2C27F8D35C0071D149 /* TweetCell.swift in Sources */,
 				64220D2A27F8D2E80071D149 /* InstagramPostCell.swift in Sources */,
 				64220D1727F8D0DE0071D149 /* SceneDelegate.swift in Sources */,
-				64220D3027F8E2030071D149 /* VC.swift in Sources */,
+				64220D3027F8E2030071D149 /* socialsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
