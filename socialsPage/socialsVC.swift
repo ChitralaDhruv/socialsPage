@@ -105,7 +105,7 @@ class socialsVC: UIViewController {
     private func setUpAutoLayout() {
         
         IGLabel.translatesAutoresizingMaskIntoConstraints = false
-        IGLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
+        IGLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -40).isActive = true
         IGLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         IGLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
@@ -115,7 +115,7 @@ class socialsVC: UIViewController {
         IGcollectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
         
         YouTubeLabel.translatesAutoresizingMaskIntoConstraints = false
-        YouTubeLabel.topAnchor.constraint(equalTo: IGcollectionView.bottomAnchor, constant: 30).isActive = true
+        YouTubeLabel.topAnchor.constraint(equalTo: IGcollectionView.bottomAnchor, constant: 10).isActive = true
         YouTubeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         YouTubeLabel.heightAnchor.constraint(equalToConstant: 23).isActive = true
         
@@ -126,7 +126,7 @@ class socialsVC: UIViewController {
         
         
         TwitterLabel.translatesAutoresizingMaskIntoConstraints = false
-        TwitterLabel.topAnchor.constraint(equalTo: YTcollectionView.bottomAnchor, constant: 30).isActive = true
+        TwitterLabel.topAnchor.constraint(equalTo: YTcollectionView.bottomAnchor, constant: 10).isActive = true
         TwitterLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         TwitterLabel.heightAnchor.constraint(equalToConstant: 23).isActive = true
         
